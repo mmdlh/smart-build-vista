@@ -182,3 +182,17 @@
 .lift-shaft { background: repeating-linear-gradient(0deg, transparent 0 18px, var(--chart-grid) 19px); }
 .animate-fade-in { animation: fade-in .3s ease-out; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+.chart-frame { position: relative; width: 100%; height: 240px; min-height: 220px; }
+.radar-glow { filter: drop-shadow(0 0 7px var(--primary)); }
+.radar-center { filter: drop-shadow(0 0 8px var(--primary)); }
+.target-box { box-shadow: 0 0 10px color-mix(in oklab, var(--destructive) 65%, transparent); }
+.target-box::before, .target-box::after { content:""; position:absolute; background:var(--destructive); }
+.target-box::before { left:50%; top:-8px; width:1px; height:60px; }
+.target-box::after { top:50%; left:-8px; height:1px; width:56px; }
+.target-reticle { border:1px solid var(--destructive); box-shadow:0 0 14px color-mix(in oklab, var(--destructive) 60%, transparent); }
+.target-reticle::before, .target-reticle::after { content:""; position:absolute; background:var(--destructive); }
+.target-reticle::before { left:50%; top:-12px; width:1px; height:78px; }
+.target-reticle::after { top:50%; left:-12px; height:1px; width:78px; }
+.wind-compass { background: repeating-radial-gradient(circle, transparent 0 32px, var(--chart-grid) 33px 34px); box-shadow: inset 0 0 26px var(--primary-glow); }
+.wind-needle { transform: translate(-50%,-100%) rotate(42deg); }
